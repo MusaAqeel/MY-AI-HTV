@@ -17,3 +17,4 @@ One thing our whole team is most proud of is our skillset improvement in React. 
 We mainly enhanced our skills in React and how to implement and fine-time an API.
 
 ## What's next for My-AI
+The more Maya is trained with people and different experiences obtained through the chat box, the more accurate the support is. 

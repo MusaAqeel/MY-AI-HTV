@@ -26,7 +26,7 @@ form {
   height: 10vh;
   position: fixed;
   bottom: 0;
-  background-color: #5E26D5;
+  background-color: #5e26d5;
   width: 100%;
   padding: 1%;
   color: white;
@@ -50,7 +50,7 @@ input {
   width: 100%;
   font-size: 1.5rem;
 
-  background: #5E26D5;
+  background: #5e26d5;
   color: rgb(255, 255, 255);
   outline: none;
   border: none;
@@ -58,7 +58,7 @@ input {
   padding: 0 10px;
 }
 
-button {
+.send-message {
   background-color: #4c465a;
   border: none;
   color: white;
@@ -71,7 +71,7 @@ button {
   border-radius: 4px;
 }
 
-button:disabled {
+.send-message:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -81,8 +81,6 @@ li {
   text-align: left;
   list-style: none;
 }
-
-
 
 .message {
   display: flex;
@@ -99,11 +97,7 @@ li {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   /*Add transition*/
   transition: all 0.2s ease-in-out;
-
-
-
 }
-
 
 .sent {
   flex-direction: row-reverse;
@@ -111,7 +105,7 @@ li {
 
 .sent {
   color: white;
-  background: #5E26D5;
+  background: #5e26d5;
   align-self: flex-end;
   border: 1px solid#cbcace;
   border-radius: 0.25rem;

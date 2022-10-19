@@ -87,7 +87,9 @@ function Chat() {
           value={input}
         />
 
-        <button type="submit"> send </button>
+        <button class="send-message" type="submit">
+          Send
+        </button>
       </form>
     </>
   );

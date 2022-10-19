@@ -37,7 +37,7 @@ form {
 
 form button {
   width: 15%;
-  background-color: rgb(16, 133, 249);
+  background-color: #4c465a;
   border-radius: 5px;
 }
 
@@ -68,7 +68,7 @@ button {
   display: inline-block;
   cursor: pointer;
   font-size: 1.25rem;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 4px;
 }
 
 button:disabled {

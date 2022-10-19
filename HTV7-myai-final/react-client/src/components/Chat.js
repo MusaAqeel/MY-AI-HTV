@@ -1,81 +1,96 @@
-import React, { useRef, useState } from 'react';
-import './Chat.css';
+import React, { useEffect, useRef, useState } from "react";
+import "./Chat.css";
 import axios from "axios";
 
 function Chat() {
-
   const [language, setLanguage] = useState("");
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
+  const messagesEndRef = useRef(null);
 
   const onSubmit = (event) => {
     event.preventDefault();
 
-
     const header = {
       Accept: "application/json",
-    }
+    };
 
-    setMessages([
-      ...messages,
-
-    ]);
-
-
-
+    setMessages([...messages]);
 
     const messageToSend = `reply to: ${input} in ${language} (Have a conversation:) `;
     console.log("submit" + messageToSend);
-    axios.post("http://localhost:4000/sendmessage", { message: messageToSend }, header)
+    axios
+      .post(
+        "http://localhost:4000/sendmessage",
+        { message: messageToSend },
+        header
+      )
       .then((response) => {
         console.log(response);
         setMessages([
           ...messages,
           {
             type: "sent",
-            message: input
+            message: input,
           },
           {
             type: "received",
-            message: response.data.message
-          }
+            message: response.data.message,
+          },
         ]);
         setInput("");
       })
       .catch((error) => {
         console.error(error);
       });
-  }
+  };
 
   const handleLanguageChange = (event) => {
     setLanguage(event.target.value);
     console.log(event.target.value);
-  }
+  };
 
   const handleChange = (event) => {
     setInput(event.target.value);
     console.log(event.target.value);
-  }
+  };
 
-  return (<>
-    <main className="chatbox">
-      <p className="received">Hi, I'm Maiya! I am an AI chatbot. Talk to me by submitting a message to me below.</p>
-      {messages.map((message, i) => {
-        return <p className={message.type} key={i}>{message.message}</p>;
-      })}
-    </main>
+  const scrollToMessagesEnd = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
-    <form onSubmit={onSubmit}>
+  useEffect(() => {
+    scrollToMessagesEnd();
+  }, [messages]);
 
+  return (
+    <>
+      <main className="chatbox">
+        <p className="received">
+          Hi, I'm Maiya! I am an AI chatbot. Talk to me by submitting a message
+          to me below.
+        </p>
+        {messages.map((message, i) => {
+          return (
+            <p className={message.type} key={i}>
+              {message.message}
+            </p>
+          );
+        })}
+        <div ref={messagesEndRef} />
+      </main>
 
-      <input placeholder="Start the convo!" onChange={handleChange} value={input} />
+      <form onSubmit={onSubmit}>
+        <input
+          placeholder="Start the convo!"
+          onChange={handleChange}
+          value={input}
+        />
 
-      <button type="submit"> send </button>
-    </form>
-  </>)
+        <button type="submit"> send </button>
+      </form>
+    </>
+  );
 }
-
-
-
 
 export default Chat;

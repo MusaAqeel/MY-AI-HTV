@@ -17,7 +17,7 @@ function Chat() {
 
     setMessages([...messages]);
 
-    const messageToSend = `reply to: ${input} in ${language} (Have a conversation:) `;
+    const messageToSend = `reply to: ${input} in ${language} (Have a conversation, be like a therapist. Do not repeat user prompt in your response:) `;
     console.log("submit" + messageToSend);
     axios
       .post(

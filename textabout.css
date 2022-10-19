@@ -1,0 +1,14 @@
+.col-sm{
+ 
+    background-color: rgb(182, 148, 255);
+    border: 1px solid rgb(182, 148, 255);
+    border-radius: 0.5rem;
+}
+.text{
+    padding: "10px";
+    font-family: 'sans-serif', Verdana, monospace;
+    font: monospace;
+    font-style: bold;
+  
+    
+}

@@ -82,7 +82,7 @@ function Chat() {
 
       <form onSubmit={onSubmit}>
         <input
-          placeholder="Start the convo!"
+          placeholder="Send Message"
           onChange={handleChange}
           value={input}
         />

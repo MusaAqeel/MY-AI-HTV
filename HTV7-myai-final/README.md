@@ -1,15 +1,15 @@
 ## How to run
 
-##### Create a .env file
-##### Add openai api key to the env file
+##### 1. Create a .env file
+##### 2. Add openai api key to the env file
 
-##### cd react-client
-##### npm install
-##### npm start
+##### 3. cd react-client
+##### 4. npm install
+##### 5. npm start
 
 
-##### cd node-server
-##### npm install
-##### npm start
+##### 6. cd node-server
+##### 7. npm install
+##### 8. npm start
 
-##### should be good to go!
+##### 9. should be good to go!

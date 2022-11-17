@@ -21,7 +21,7 @@ function Chat() {
     console.log("submit" + messageToSend);
     axios
       .post(
-        "http://localhost:4000/sendmessage",
+        "https://htv77-4v2o.vercel.app/",
         { message: messageToSend },
         header
       )

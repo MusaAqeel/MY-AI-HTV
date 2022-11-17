@@ -21,7 +21,7 @@ function Chat() {
     console.log("submit" + messageToSend);
     axios
       .post(
-        "https://my-ai.vercel.app/",
+        "htv77-4v2o-cfy9tsg85-musaaqeel.vercel.app",
         { message: messageToSend },
         header
       )

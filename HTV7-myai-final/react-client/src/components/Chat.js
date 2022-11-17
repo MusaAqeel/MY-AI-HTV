@@ -21,7 +21,7 @@ function Chat() {
     console.log("submit" + messageToSend);
     axios
       .post(
-        "http://localhost:4000/",
+        "http://localhost:4000/sendmessage",
         { message: messageToSend },
         header
       )

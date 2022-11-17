@@ -9,7 +9,7 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const axios = require('axios');
 var cors = require('cors');
 
-const whitelist = ["http://localhost:3000"]
+const whitelist = ["https://my-ai.vercel.app/Login"]
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin || whitelist.indexOf(origin) !== -1) {

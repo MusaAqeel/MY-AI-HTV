@@ -21,12 +21,12 @@ function Chat() {
     console.log("submit" + messageToSend);
     axios
       .post(
-        "http://localhost:4000/sendmessage",
+        "https://my-ai-server.vercel.app/api",
         { message: messageToSend },
         header
       )
       .then((response) => {
-        console.log(response);
+        console.log(response.data.result)
         setMessages([
           ...messages,
           {
@@ -35,7 +35,7 @@ function Chat() {
           },
           {
             type: "received",
-            message: response.data.message,
+            message: response.data.result,
           },
         ]);
         setInput("");

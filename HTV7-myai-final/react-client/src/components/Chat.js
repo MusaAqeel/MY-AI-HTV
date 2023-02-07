@@ -10,6 +10,7 @@ function Chat() {
 
   const onSubmit = (event) => {
     event.preventDefault();
+   if (!input.trim()) return; // 
 
     const header = {
       Accept: "application/json",

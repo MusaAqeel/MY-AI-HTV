@@ -6,7 +6,7 @@ function TextBoxabout(props) {
       <div className="col-sm" style={{ alignContent: 'center', }}>
         <div className="text" style={{ color: props.textcolor, fontSize: props.fontsize, padding: "20px", maxWidth: "909px" }}>
           <h1 style={{textAlign:'center'}}> Mental Health Tips </h1>
-          <p> My-Ai  is language learning app enhanced by machine learning using a open AI API!
+          <p> My-Ai, chat to an Ai like a human by talking to it!
             <br></br><br></br>
             Get enough sleep: Most people need around eight hours of sleep per night. Consider going to bed and waking up at the same time each day to help regulate your body’s natural sleep rhythm.
             <br></br>  <br></br>

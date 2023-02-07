@@ -9,7 +9,7 @@ function Header() {
 <img src={glogo} className="App-logo" alt="logo" style={{height: '1000px', padding: "10px",}} />
 
 <p  className="HeaderText" style={{  fontSize:"50px"}}>
- My-Ai
+ {/* My-Ai */}
 </p>
 
     
